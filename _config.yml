@@ -40,7 +40,7 @@ social:
   links:
     - "https://www.linkedin.com/in/roozbeh-atri/"
     - "https://github.com/roozbehatri"
-    - "mailto:roozbeh.atri@gmail.com"
+    # - "mailto:roozbeh.atri@gmail.com"
 
 # Open Graph image for social sharing (optional but recommended)
 og_image: "/assets/images/roozbeh_logo.png"
