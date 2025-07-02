@@ -1,34 +1,45 @@
-# Site settings
-remote_theme: mmistakes/minimal-mistakes
+# Theme Settings
+remote_theme: "mmistakes/minimal-mistakes"  # ✅ Added this to enable remote theme
+minimal_mistakes_skin: "air"
 
-title: Roozbeh Atri
-description: >-
-  AI/ML Engineer | Reinforcement Learning | Healthcare AI
-url: "https://roozbehatri.github.io" # Change 'yourusername' to your GitHub username
+# Site Settings
+locale: "en-US"
+title: "Roozbeh Atri, PhD"
+title_separator: "-"
+name: "Roozbeh Atri"  # ✅ Your name
+description: "AI/ML Engineer | Reinforcement Learning | Healthcare AI | Gen AP"
+url: "https://roozbehatri.github.io"  # 🔧 Replace 'yourusername' with your GitHub username
 baseurl: ""
+repository: "roozbehatri/roozbehatri.github.io"  # 🔧 Replace 'yourusername' with your GitHub username
 
+# Author Details
 author:
-  name: Roozbeh Atri, PhD
-  avatar: /assets/images/avatar.png # You can upload your avatar image to this path
-  bio: AI/ML Engineer specializing in Reinforcement Learning and Healthcare AI. Focused on real-time systems and patient-centered solutions.
-  location: New York, NY
-  email: roozbeh.atri@gmail.com
-  linkedin: roozbeh-atri
-  github: roozbehatri
-
-# Appearance settings
-minimal_mistakes_skin: default
-
-# Social links
-social:
-  type: Person
-  name: Roozbeh Atri
+  name: "Roozbeh Atri"  # ✅ Your name
+  avatar: "/assets/images/avatar.png"  # 🔧 Upload your avatar image or remove this line if not using
+  bio: "AI/ML Engineer specializing in Reinforcement Learning and Healthcare AI. Focused on real-time systems and patient-centered solutions."  # ✅ Your bio
+  location: "New York, NY"  # ✅ Your location
+  email: "roozbeh.atri@gmail.com"  # 🔧 Your email
   links:
-    - "https://www.linkedin.com/in/roozbeh-atri/"
-    - "https://github.com/roozbehatri"
-    - "mailto:roozbeh.atri@gmail.com"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:roozbeh.atri@gmail.com"  # 🔧 Your email
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/roozbeh-atri/"  # 🔧 Your LinkedIn URL
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/roozbehatri"  # 🔧 Your GitHub URL
 
-# Navigation
+# Social Sharing
+social:
+  type: "Person"
+  name: "Roozbeh Atri"  # ✅ Your name
+  links:
+    - "https://www.linkedin.com/in/roozbeh-atri/"  # 🔧 Your LinkedIn URL
+    - "https://github.com/roozbehatri"  # 🔧 Your GitHub URL
+    - "mailto:roozbeh.atri@gmail.com"  # 🔧 Your email
+
+# Navigation Menu ✅ Added your site structure
 nav:
   - title: "Home"
     url: /
@@ -41,13 +52,133 @@ nav:
 
 # Plugins (GitHub Pages-supported)
 plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
   - jekyll-feed
-  - jekyll-seo-tag
+  - jekyll-include-cache
 
-# Build settings
+# Site Footer ✅ Cleaned this to match your socials
+footer:
+  links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/roozbeh-atri"  # 🔧 Your LinkedIn URL
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/roozbehatri"  # 🔧 Your GitHub URL
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "roozbeh.atri@gmail.com"  # 🔧 Your email
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - minimal-mistakes-jekyll.gemspec
+  - node_modules
+  - package.json
+  - package-lock.json
+  - Rakefile
+  - README
+  - tmp
+  - /docs
+  - /test
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Conversion
 markdown: kramdown
 highlighter: rouge
-permalink: /:categories/:title/
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 
-# Optional analytics (comment out if not using)
-# google_analytics: UA-XXXXXXXXX-X
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Outputting
+permalink: /:categories/:title/
+timezone:
+
+# Pagination with jekyll-paginate
+paginate: 5
+paginate_path: /page:num/
+
+pagination:
+  debug: false
+  collection: 'posts'
+  per_page: 10
+  permalink: '/page/:num/'
+  title: ':title - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  category: 'posts'
+  tag: ''
+  locale: ''
+  trail:
+    before: 2
+    after: 2
+
+# Archives
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# HTML Compression
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments:
+      share: true
+      related: true
