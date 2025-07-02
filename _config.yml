@@ -16,9 +16,13 @@ repository: "roozbehatri/roozbehatri.github.io"  # 🔧 Replace 'yourusername' w
 author:
   name: "Roozbeh Atri"  # ✅ Your name
   avatar: "/assets/images/avatar.png"  # 🔧 Upload your avatar image or remove this line if not using
-  bio: "AI/ML Engineer specializing in Reinforcement Learning and Healthcare AI. Focused on real-time systems and patient-centered solutions."  # ✅ Your bio
+  logo: "/assets/images/roozbeh_logo.png"
+  favicon: "/assets/images/roozbeh_logo.png"
+  bio: "Data Scientist | Machine Learning Engineer | AI Specialist."  # ✅ Your bio
   location: "New York, NY"  # ✅ Your location
   email: "roozbeh.atri@gmail.com"  # 🔧 Your email
+  masthead_title: "Roozbeh Atri"  # Or leave blank to hide the title
+  
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -69,7 +73,7 @@ footer:
       url: "https://github.com/roozbehatri"  # 🔧 Your GitHub URL
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "roozbeh.atri@gmail.com"  # 🔧 Your email
+      url: "mailto:roozbeh.atri@gmail.com"  # 🔧 Your email
 
 # Reading Files
 include:
@@ -182,3 +186,10 @@ defaults:
       comments:
       share: true
       related: true
+
+
+
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "11432276639"  # Replace with your tracking ID
